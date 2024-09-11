@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->integer('is_notification_enabled');
+            $table->integer('is_notification_enabled')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });
